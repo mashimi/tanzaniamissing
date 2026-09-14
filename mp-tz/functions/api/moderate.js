@@ -79,16 +79,16 @@ export const onRequestPost = async ({ request, env }) => {
   }
 
   if (body.action === "archive" && typeof body.case_id === "string") {
-    if (!env.GITHUB_TOKEN) return Response.json({ error: "GITHUB_TOKEN not configured" }, 500);
+    if (!env.GITHUB_TOKEN) return Response.json({ error: "GITHUB_TOKEN not configured" }, { status: 500 });
 
     const sources = Array.isArray(body.sources)
       ? body.sources.map(s => String(s).trim()).filter(Boolean)
       : [];
     if (sources.length < 2)
-      return Response.json({ error: "at least 2 sources are required for a verified archive" }, 400);
+      return Response.json({ error: "at least 2 sources are required for a verified archive" }, { status: 400 });
 
     const row = await env.DB.prepare("SELECT data FROM cases WHERE id = ?").bind(body.case_id).first();
-    if (!row) return Response.json({ error: "case not found" }, 404);
+    if (!row) return Response.json({ error: "case not found" }, { status: 404 });
     const c = JSON.parse(row.data);
 
     const status = ["missing", "found_alive", "found_deceased", "unknown"].includes(body.status)
@@ -149,11 +149,11 @@ export const onRequestPost = async ({ request, env }) => {
       });
       if (!put.ok) {
         const t = await put.text();
-        return Response.json({ error: `GitHub API ${put.status}: ${t.slice(0, 200)}` }, 502);
+        return Response.json({ error: `GitHub API ${put.status}: ${t.slice(0, 200)}` }, { status: 502 });
       }
       var html_url = (await put.json()).content?.html_url ?? null;
     } catch (e) {
-      return Response.json({ error: `GitHub request failed: ${e.message}` }, 502);
+      return Response.json({ error: `GitHub request failed: ${e.message}` }, { status: 502 });
     }
 
     // Keep the D1 copy in sync (same verified data) so /api/cases agrees with the static record
