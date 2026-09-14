@@ -1,0 +1,45 @@
+name: Build and Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: mp-tz/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd mp-tz
+          npm ci
+
+      - name: Lint record JSON files
+        run: |
+          cd mp-tz
+          npm run lint:records
+
+      - name: Build dataset and static site
+        run: |
+          cd mp-tz
+          npm run build
+
+      - name: Deploy to Cloudflare Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mp-tz
+          directory: mp-tz/out

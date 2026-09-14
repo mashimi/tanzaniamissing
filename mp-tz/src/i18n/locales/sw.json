@@ -1,0 +1,42 @@
+{
+  "site.title": "Rejista ya Watu Waliopotea – Tanzania",
+  "nav.home": "Nyumbani",
+  "nav.submit": "Ripoti Tukio",
+
+  "home.heading": "Watu Walioteswa na Kufichwa Tanzania",
+  "home.tagline": "Kurekodi uteshaji wa watu. Kila jina lina umuhimu.",
+  "home.map_title": "Walipochukuliwa",
+  "home.registry_title": "Rejista",
+  "home.search_placeholder": "Tafuta kwa jina, mkoa, au neno…",
+
+  "person.age": "Umri",
+  "person.last_seen": "Alionekana mwisho",
+  "person.unverified": "haijathibitishwa",
+
+  "status.missing": "Ametoweka",
+  "status.found_alive": "Amepatikana hai",
+  "status.found_deceased": "Amepatikana amefariki",
+  "status.unknown": "Haijulikani",
+
+  "submit.heading": "Ripoti Kutoweka kwa Mtu",
+  "submit.intro": "Ripoti yako inaenda kwenye mfumo wetu salama wa ukaguzi. Unaweza kubaki bila jina.",
+  "submit.signal_note": "Ukiwa katika hatari, usitumie fomu hii — wasiliana na timu kwa Signal.",
+  "submit.name_label": "Jina kamili la mtu aliyetoweka",
+  "submit.age_label": "Umri (makadirio yanatosha)",
+  "submit.gender_label": "Jinsia",
+  "submit.date_label": "Tarehe alipoonekana mwisho",
+  "submit.region_label": "Mkoa",
+  "submit.district_label": "Wilaya",
+  "submit.location_label": "Alionekana mwisho wapi?",
+  "submit.circumstances_label": "Nini kilifanyika? Eleza mazingira.",
+  "submit.photo_label": "Kiungo cha Picha (Image URL e.g. https://... au njia ya picha - hiari)",
+  "submit.contact_label": "Mawasiliano yako (hiari – namba ya Signal au barua pepe)",
+  "submit.consent_label": "Ninathibitisha nina ruhusa ya familia kushiriki taarifa hizi.",
+  "submit.send": "Tuma Ripoti",
+  "submit.sending": "Inatuma…",
+  "submit.success": "Asante. Ripoti yako imepokelewa na itakaguliwa kabla ya kuchapishwa.",
+  "submit.error": "Hitilafu imetokea. Tafadhali jaribu tovuti kuu au wasiliana na timu kwa Signal.",
+
+  "footer.disclaimer": "Rejista hii inasimamiwa na wajitolea wa jamii ya kiraia. Data inathibitishwa kabla ya kuchapishwa.",
+  "footer.mirror": "Tovuti mbadala"
+}

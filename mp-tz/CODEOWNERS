@@ -1,0 +1,3 @@
+# Case data changes always require maintainer review
+records/            @your-org/maintainers
+public/photos/      @your-org/maintainers

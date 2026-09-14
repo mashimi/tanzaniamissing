@@ -1,0 +1,16 @@
+{
+  "id": "0002-demo-person-b",
+  "full_name": "Demo Person B",
+  "age": null,
+  "gender": "female",
+  "photo_path": "",
+  "last_seen_date": "2025-06-10",
+  "location": { "name": "", "latitude": -6.17, "longitude": 35.75, "region": "Dodoma", "district": "" },
+  "status": "missing",
+  "circumstances": "DEMO RECORD — placeholder text. Replace or delete before launch.",
+  "tags": ["demo"],
+  "verified": false,
+  "sources": [],
+  "is_public": true,
+  "created_at": "2025-06-10T00:00:00Z"
+}

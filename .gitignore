@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.env
+.env.*
+!.env.example
+.wrangler/
+mp-tz-scaffold/
+mp-tz/node_modules/
+mp-tz/.next/
+mp-tz/out/

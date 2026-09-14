@@ -1,0 +1,42 @@
+{
+  "site.title": "Missing Persons Registry – Tanzania",
+  "nav.home": "Home",
+  "nav.submit": "Report a Case",
+
+  "home.heading": "People Who Have Been Disappeared in Tanzania",
+  "home.tagline": "Documenting enforced disappearances. Every name matters.",
+  "home.map_title": "Where They Were Taken",
+  "home.registry_title": "Registry",
+  "home.search_placeholder": "Search by name, region, or keyword…",
+
+  "person.age": "Age",
+  "person.last_seen": "Last seen",
+  "person.unverified": "unverified",
+
+  "status.missing": "Missing",
+  "status.found_alive": "Found alive",
+  "status.found_deceased": "Found deceased",
+  "status.unknown": "Unknown",
+
+  "submit.heading": "Report a Disappearance",
+  "submit.intro": "Your report goes to our secure review queue. You may remain anonymous.",
+  "submit.signal_note": "If you are at risk, do not use this form — contact the team on Signal instead.",
+  "submit.name_label": "Full name of the missing person",
+  "submit.age_label": "Age (approximate is fine)",
+  "submit.gender_label": "Gender",
+  "submit.date_label": "Date last seen",
+  "submit.region_label": "Region",
+  "submit.district_label": "District",
+  "submit.location_label": "Where were they last seen?",
+  "submit.circumstances_label": "What happened? Describe the circumstances.",
+  "submit.photo_label": "Photo Image URL link (e.g. https://... or image link - optional)",
+  "submit.contact_label": "Your contact (optional – Signal number or email)",
+  "submit.consent_label": "I confirm I have the family's consent to share this information.",
+  "submit.send": "Submit Report",
+  "submit.sending": "Sending…",
+  "submit.success": "Thank you. Your report has been received and will be reviewed before publication.",
+  "submit.error": "Something went wrong. Please try the primary site or contact the team on Signal.",
+
+  "footer.disclaimer": "This registry is maintained by civil-society volunteers. Data is verified before publication.",
+  "footer.mirror": "Mirror sites"
+}

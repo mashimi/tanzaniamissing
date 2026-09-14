@@ -1,0 +1,37 @@
+name: Daily Maintenance & Triage
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Run daily at 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Lint records integrity
+        run: |
+          cd mp-tz
+          npm run lint:records
+
+      - name: Purge old unreviewed D1 submissions
+        env:
+          MODERATOR_TOKEN: ${{ secrets.MODERATOR_TOKEN }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          if [ -n "$SITE_URL" ] && [ -n "$MODERATOR_TOKEN" ]; then
+            curl -X POST "$SITE_URL/api/moderate" \
+              -H "Authorization: Bearer $MODERATOR_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d '{"action": "purge_old", "days": 30}'
+          else
+            echo "Skipping remote purge: secrets missing"
+          fi

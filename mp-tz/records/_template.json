@@ -1,0 +1,16 @@
+{
+  "id": "XXXX-slug",
+  "full_name": "",
+  "age": null,
+  "gender": "unknown",
+  "photo_path": "",
+  "last_seen_date": "2025-01-01",
+  "location": { "name": "", "latitude": -6.82, "longitude": 39.28, "region": "", "district": "" },
+  "status": "missing",
+  "circumstances": "",
+  "tags": [],
+  "verified": false,
+  "sources": [],
+  "is_public": true,
+  "created_at": ""
+}

@@ -1,0 +1,11 @@
+name = "mp-tz"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "out"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mp-tz-submissions"
+database_id = "PASTE-ID-FROM-wrangler-d1-create"
