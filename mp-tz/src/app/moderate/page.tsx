@@ -86,7 +86,7 @@ export default function Moderate() {
     setToken(t);
   }
 
-  async function act(action: "mark_imported" | "reject") {
+  async function act(action: "publish" | "reject") {
     if (!token || selected.size === 0) return;
     if (action === "reject" && !confirm(`Reject ${selected.size} submission(s)? This hides them permanently.`)) return;
     setBusy(true);
@@ -99,8 +99,8 @@ export default function Moderate() {
       });
       if (!res.ok) throw new Error(String(res.status));
       const data = await res.json();
-      setNotice(action === "mark_imported"
-        ? `Approved ${data.marked} submission(s) — continue in the CLI to create records.`
+      setNotice(action === "publish"
+        ? `Published ${data.published.length} case(s) to the public registry. Verify sources later via the records flow.`
         : `Rejected ${data.rejected} submission(s).`);
       await load(token);
     } catch {
@@ -168,9 +168,9 @@ export default function Moderate() {
 
       {submissions !== null && submissions.length > 0 && (
         <div className="flex gap-2 mb-6">
-          <button onClick={() => act("mark_imported")} disabled={busy || selected.size === 0}
+          <button onClick={() => act("publish")} disabled={busy || selected.size === 0}
             className="px-4 py-2 rounded-xl bg-green-700 hover:bg-green-600 disabled:opacity-40 text-white font-semibold text-sm transition-colors">
-            Approve selected ({selected.size})
+            Approve &amp; publish selected ({selected.size})
           </button>
           <button onClick={() => act("reject")} disabled={busy || selected.size === 0}
             className="px-4 py-2 rounded-xl bg-red-800 hover:bg-red-700 disabled:opacity-40 text-white font-semibold text-sm transition-colors">

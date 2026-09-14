@@ -9,3 +9,10 @@ CREATE TABLE IF NOT EXISTS submissions (
 );
 CREATE INDEX IF NOT EXISTS idx_sub_status ON submissions (status, created_at);
 CREATE INDEX IF NOT EXISTS idx_sub_iphash ON submissions (ip_hash, created_at);
+
+-- Published cases (created by moderator "approve & publish" action)
+CREATE TABLE IF NOT EXISTS cases (
+  id           TEXT PRIMARY KEY,
+  data         TEXT NOT NULL,
+  published_at TEXT NOT NULL DEFAULT (datetime('now'))
+);

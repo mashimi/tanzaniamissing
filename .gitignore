@@ -1,7 +1,7 @@
 node_modules/
 .next/
-out/
-functions/
+/out/
+/functions/
 .env
 .env.*
 !.env.example
@@ -10,4 +10,3 @@ mp-tz-scaffold/
 mp-tz/node_modules/
 mp-tz/.next/
 mp-tz/out/
-mp-tz/functions/

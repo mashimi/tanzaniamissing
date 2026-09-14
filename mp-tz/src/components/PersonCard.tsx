@@ -10,12 +10,12 @@ const statusColor: Record<string, string> = {
   unknown: "bg-yellow-600",
 };
 
-export default function PersonCard({ person: p }: { person: Person }) {
+export default function PersonCard({ person: p, href }: { person: Person; href?: string }) {
   const { t } = useI18n();
   const initials = p.full_name.split(/\s+/).map(w => w[0]).slice(0, 2).join("").toUpperCase();
 
   return (
-    <a href={`/persons/${p.id}/`}
+    <a href={href ?? `/persons/${p.id}/`}
        className="group block bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-red-500/50 hover:ring-2 hover:ring-red-500/40 transition-all duration-200 shadow-lg hover:shadow-red-900/20">
       {p.photo_path ? (
         <div className="relative overflow-hidden">

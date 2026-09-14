@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import PersonCard from "./PersonCard";
 import SearchBar from "./SearchBar";
@@ -25,18 +25,39 @@ export default function Registry({ initial }: { initial: Person[] }) {
   const { t } = useI18n();
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
+  const [persons, setPersons] = useState<Person[]>(initial);
+
+  // Live-merge cases published from the moderation dashboard (D1-backed).
+  // Static records stay first-class; D1 cases link to the client-side view.
+  const staticIds = useMemo(() => new Set(initial.map(p => p.id)), [initial]);
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/cases")
+      .then(r => (r.ok ? r.json() : Promise.reject()))
+      .then(d => {
+        if (cancelled || !Array.isArray(d.cases) || d.cases.length === 0) return;
+        setPersons(prev => {
+          const ids = new Set(prev.map(p => p.id));
+          const fresh = (d.cases as Person[]).filter(c => !ids.has(c.id));
+          if (fresh.length === 0) return prev;
+          return [...prev, ...fresh].sort((a, b) => b.last_seen_date.localeCompare(a.last_seen_date));
+        });
+      })
+      .catch(() => {}); // registry works offline from static data if the API is unreachable
+    return () => { cancelled = true; };
+  }, []);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return initial.filter(p => {
+    return persons.filter(p => {
       const matchesSearch = !q || [p.full_name, p.location.region, p.location.district, p.circumstances, ...p.tags]
         .join(" ").toLowerCase().includes(q);
       const matchesStatus = statusFilter === "all" || p.status === statusFilter;
       return matchesSearch && matchesStatus;
     });
-  }, [initial, search, statusFilter]);
+  }, [persons, search, statusFilter]);
 
-  const counts = statusCounts(initial);
+  const counts = statusCounts(persons);
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
@@ -46,7 +67,7 @@ export default function Registry({ initial }: { initial: Person[] }) {
         <div className="relative">
           <div className="inline-flex items-center gap-2 bg-red-950/40 border border-red-900/50 rounded-full px-4 py-1.5 text-red-400 text-xs font-medium mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-            {initial.length} {t("home.registry_title")}
+            {persons.length} {t("home.registry_title")}
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
             {t("home.heading")}
@@ -119,7 +140,10 @@ export default function Registry({ initial }: { initial: Person[] }) {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
-            {filtered.map(p => <PersonCard key={p.id} person={p} />)}
+            {filtered.map(p => (
+              <PersonCard key={p.id} person={p}
+                href={staticIds.has(p.id) ? undefined : `/persons/view/?id=${encodeURIComponent(p.id)}`} />
+            ))}
           </div>
         )}
       </section>
