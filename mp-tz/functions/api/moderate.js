@@ -78,6 +78,91 @@ export const onRequestPost = async ({ request, env }) => {
     return Response.json({ ok: true, published });
   }
 
+  if (body.action === "archive" && typeof body.case_id === "string") {
+    if (!env.GITHUB_TOKEN) return Response.json({ error: "GITHUB_TOKEN not configured" }, 500);
+
+    const sources = Array.isArray(body.sources)
+      ? body.sources.map(s => String(s).trim()).filter(Boolean)
+      : [];
+    if (sources.length < 2)
+      return Response.json({ error: "at least 2 sources are required for a verified archive" }, 400);
+
+    const row = await env.DB.prepare("SELECT data FROM cases WHERE id = ?").bind(body.case_id).first();
+    if (!row) return Response.json({ error: "case not found" }, 404);
+    const c = JSON.parse(row.data);
+
+    const status = ["missing", "found_alive", "found_deceased", "unknown"].includes(body.status)
+      ? body.status : "missing";
+    const age = Number(body.age);
+    const district = typeof body.district === "string" && body.district.trim()
+      ? body.district.trim() : c.location.district;
+
+    const record = {
+      id: c.id,
+      full_name: c.full_name,
+      age: Number.isFinite(age) && age > 0 ? age : (c.age ?? null),
+      gender: c.gender ?? "unknown",
+      photo_path: c.photo_path ?? "",
+      last_seen_date: c.last_seen_date,
+      location: { ...c.location, district },
+      status,
+      circumstances: c.circumstances ?? "",
+      tags: c.tags ?? [],
+      verified: true,
+      sources,
+      is_public: true,
+      created_at: c.created_at,
+    };
+
+    const repo = env.GITHUB_REPO ?? "mashimi/tanzaniamissing";
+    const branch = env.GITHUB_BRANCH ?? "main";
+    const file = `mp-tz/records/${c.id}.json`;
+    const api = `https://api.github.com/repos/${repo}/contents/${file}`;
+    const ghHeaders = {
+      authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      "user-agent": "mp-tz-moderation",
+      accept: "application/vnd.github+json",
+      "content-type": "application/json",
+    };
+
+    // base64 that survives unicode
+    const contentStr = JSON.stringify(record, null, 2) + "\n";
+    const bytes = new TextEncoder().encode(contentStr);
+    let bin = "";
+    bytes.forEach(b => { bin += String.fromCharCode(b); });
+
+    try {
+      // Update if the file already exists, create otherwise
+      let sha;
+      const get = await fetch(`${api}?ref=${branch}`, { headers: ghHeaders });
+      if (get.ok) sha = (await get.json()).sha;
+
+      const put = await fetch(api, {
+        method: "PUT",
+        headers: ghHeaders,
+        body: JSON.stringify({
+          message: `Add verified record ${c.id} (via moderation dashboard)`,
+          content: btoa(bin),
+          branch,
+          ...(sha ? { sha } : {}),
+        }),
+      });
+      if (!put.ok) {
+        const t = await put.text();
+        return Response.json({ error: `GitHub API ${put.status}: ${t.slice(0, 200)}` }, 502);
+      }
+      var html_url = (await put.json()).content?.html_url ?? null;
+    } catch (e) {
+      return Response.json({ error: `GitHub request failed: ${e.message}` }, 502);
+    }
+
+    // Keep the D1 copy in sync (same verified data) so /api/cases agrees with the static record
+    const synced = { ...record, archived: true };
+    await env.DB.prepare("UPDATE cases SET data = ? WHERE id = ?").bind(JSON.stringify(synced), c.id).run();
+
+    return Response.json({ ok: true, file, html_url });
+  }
+
   if (body.action === "unpublish" && typeof body.case_id === "string") {
     await env.DB.prepare("DELETE FROM cases WHERE id = ?").bind(body.case_id).run();
     return Response.json({ ok: true });

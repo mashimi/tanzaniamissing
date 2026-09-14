@@ -11,6 +11,15 @@ type Submission = {
 
 type Triage = { urgent?: boolean; injection_attempt?: boolean; spammy?: boolean };
 type Suggestions = { age?: number | null; district?: string; date_iso?: string | null; urgency?: string };
+type Case = {
+  id: string;
+  full_name: string;
+  age: number | null;
+  status: string;
+  last_seen_date: string;
+  location: { region?: string; district?: string };
+  archived?: boolean;
+};
 
 const inputClass = "w-full px-4 py-2.5 rounded-xl bg-gray-900 text-white border border-gray-800 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors text-sm placeholder-gray-600";
 
@@ -39,6 +48,20 @@ export default function Moderate() {
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
+
+  const [cases, setCases] = useState<Case[]>([]);
+  const [archiving, setArchiving] = useState<string | null>(null);
+
+  const loadCases = useCallback(() => {
+    fetch("/api/cases")
+      .then(r => (r.ok ? r.json() : Promise.reject()))
+      .then(d => setCases(d.cases ?? []))
+      .catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    loadCases();
+  }, [loadCases]);
 
   useEffect(() => {
     setToken(sessionStorage.getItem("moderator_token"));
@@ -100,11 +123,51 @@ export default function Moderate() {
       if (!res.ok) throw new Error(String(res.status));
       const data = await res.json();
       setNotice(action === "publish"
-        ? `Published ${data.published.length} case(s) to the public registry. Verify sources later via the records flow.`
+        ? `Published ${data.published.length} case(s) to the public registry. Use "Archive & verify" below once you've confirmed sources.`
         : `Rejected ${data.rejected} submission(s).`);
       await load(token);
+      loadCases();
     } catch {
       setNotice("Action failed — try again.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function submitArchive(e: React.FormEvent<HTMLFormElement>, caseId: string) {
+    e.preventDefault();
+    if (!token) return;
+    const f = new FormData(e.currentTarget);
+    const sources = String(f.get("sources") ?? "").split("\n").map(s => s.trim()).filter(Boolean);
+    if (sources.length < 2) {
+      setNotice("At least 2 source URLs are required for a verified archive.");
+      return;
+    }
+    setBusy(true);
+    setNotice(null);
+    try {
+      const res = await fetch("/api/moderate", {
+        method: "POST",
+        headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+        body: JSON.stringify({
+          action: "archive",
+          case_id: caseId,
+          sources,
+          status: f.get("status"),
+          age: f.get("age") || undefined,
+          district: f.get("district") || undefined,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setNotice(`Archive failed: ${data.error ?? res.status}`);
+        return;
+      }
+      setNotice(`Archived ${caseId} to the permanent registry (records/${caseId}.json). The site rebuilds automatically; mirrors update in ~2 minutes.`);
+      setArchiving(null);
+      loadCases();
+    } catch {
+      setNotice("Archive failed — try again.");
     } finally {
       setBusy(false);
     }
@@ -227,6 +290,90 @@ export default function Moderate() {
           );
         })}
       </div>
+
+      {/* Published cases (live registry) */}
+      {token && (
+        <div className="mt-14">
+          <h2 className="text-xl font-bold text-white">Published Cases</h2>
+          <p className="text-gray-500 text-sm mb-4">
+            Live on the public registry. Archive a case to make it a permanent, verified record (survives in the repo, feeds mirrors).
+          </p>
+
+          {cases.length === 0 && (
+            <p className="text-gray-600 text-sm">No published cases yet.</p>
+          )}
+
+          <div className="space-y-4">
+            {cases.map(c => (
+              <div key={c.id} className="bg-gray-900 border border-gray-800 rounded-xl p-5">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="font-bold text-white">{c.full_name}</span>
+                  <span className="text-gray-600 text-xs">{c.id}</span>
+                  {c.archived
+                    ? <span className="px-2 py-0.5 rounded-full bg-green-950 border border-green-800 text-green-300 text-xs font-semibold">ARCHIVED ✓</span>
+                    : <span className="px-2 py-0.5 rounded-full bg-yellow-950 border border-yellow-800 text-yellow-300 text-xs font-semibold">UNVERIFIED</span>}
+                  <a href={`/persons/view/?id=${encodeURIComponent(c.id)}`} target="_blank" rel="noopener noreferrer"
+                    className="text-red-400 hover:text-red-300 text-xs ml-auto transition-colors">
+                    View public page →
+                  </a>
+                </div>
+                <p className="text-gray-500 text-xs mt-1">
+                  Last seen {c.last_seen_date} · {[c.location?.district, c.location?.region].filter(Boolean).join(", ")}
+                </p>
+
+                {!c.archived && (
+                  <button onClick={() => setArchiving(archiving === c.id ? null : c.id)}
+                    className="mt-3 px-4 py-2 rounded-xl bg-blue-800 hover:bg-blue-700 text-white font-semibold text-sm transition-colors">
+                    {archiving === c.id ? "Cancel" : "Archive & verify"}
+                  </button>
+                )}
+
+                {archiving === c.id && (
+                  <form onSubmit={e => submitArchive(e, c.id)} className="mt-4 space-y-3 border-t border-gray-800 pt-4">
+                    <p className="text-gray-400 text-xs leading-relaxed">
+                      Confirm this case independently first. Archiving commits a verified record
+                      (<code className="text-gray-300">records/{c.id}.json</code>) to the GitHub repo and triggers a rebuild —
+                      the case becomes permanent, verified, and is included in the mirrors.
+                    </p>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                      <div>
+                        <label className="block text-xs text-gray-500 mb-1 uppercase tracking-wider" htmlFor={`status-${c.id}`}>Status</label>
+                        <select id={`status-${c.id}`} name="status" defaultValue={c.status} className={inputClass}>
+                          <option value="missing">missing</option>
+                          <option value="found_alive">found_alive</option>
+                          <option value="found_deceased">found_deceased</option>
+                          <option value="unknown">unknown</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-xs text-gray-500 mb-1 uppercase tracking-wider" htmlFor={`age-${c.id}`}>Age (optional)</label>
+                        <input id={`age-${c.id}`} name="age" type="number" min={0} max={120} defaultValue={c.age ?? ""}
+                          className={inputClass} placeholder={c.age ? String(c.age) : "unknown"} />
+                      </div>
+                      <div>
+                        <label className="block text-xs text-gray-500 mb-1 uppercase tracking-wider" htmlFor={`district-${c.id}`}>District (optional)</label>
+                        <input id={`district-${c.id}`} name="district" type="text" defaultValue={c.location?.district ?? ""}
+                          className={inputClass} placeholder="correct if needed" />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-500 mb-1 uppercase tracking-wider" htmlFor={`sources-${c.id}`}>
+                        Sources (one per line, minimum 2 — news articles, official statements…)
+                      </label>
+                      <textarea id={`sources-${c.id}`} name="sources" rows={3} required
+                        className={inputClass} placeholder={"https://example.com/news-article-1\nhttps://example.com/official-statement"} />
+                    </div>
+                    <button type="submit" disabled={busy}
+                      className="px-4 py-2 rounded-xl bg-green-700 hover:bg-green-600 disabled:opacity-40 text-white font-semibold text-sm transition-colors">
+                      {busy ? "Committing…" : "Commit to permanent registry"}
+                    </button>
+                  </form>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
