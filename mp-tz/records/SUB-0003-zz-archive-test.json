@@ -1,0 +1,25 @@
+{
+  "id": "SUB-0003-zz-archive-test",
+  "full_name": "ZZ-ARCHIVE-TEST",
+  "age": 30,
+  "gender": "unknown",
+  "photo_path": "",
+  "last_seen_date": "2026-09-10",
+  "location": {
+    "name": "Test area",
+    "latitude": -6.8,
+    "longitude": 39.3,
+    "region": "Dodoma",
+    "district": "Dodoma Urban"
+  },
+  "status": "missing",
+  "circumstances": "Archive pipeline test — will be removed.",
+  "tags": [],
+  "verified": true,
+  "sources": [
+    "https://example.org/test-source-1",
+    "https://example.org/test-source-2"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-14 21:24:53"
+}
