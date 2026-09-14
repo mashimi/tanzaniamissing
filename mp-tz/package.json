@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx next dev",
-    "build": "npm run prebuild && npx next build",
+    "build": "npm run prebuild && npx next build && node -e \"const fs=require('fs'); fs.cpSync('out', '../out', {recursive:true}); if(fs.existsSync('functions')) fs.cpSync('functions', '../functions', {recursive:true});\"",
     "start": "npx next start",
     "lint": "npx next lint",
     "build:data": "node scripts/build-data.mjs",
