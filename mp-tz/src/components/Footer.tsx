@@ -13,7 +13,22 @@ export default function Footer() {
       <p className="text-gray-600 text-xs max-w-lg mx-auto leading-relaxed">
         {t("footer.disclaimer")}
       </p>
-      <p className="text-gray-800 text-xs">
+      
+      {/* Redundancy Mirrors Section */}
+      <div className="pt-2 text-xs text-gray-500 space-y-1">
+        <div className="text-gray-600 font-medium">{t("footer.mirror")}:</div>
+        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-gray-500">
+          <a href="https://tanzania.qd.je" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">tanzania.qd.je</a>
+          <span>·</span>
+          <a href="https://mp-tz.pages.dev" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">mp-tz.pages.dev</a>
+          <span>·</span>
+          <a href="https://mashimi.github.io/tanzaniamissing" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">GitHub Mirror</a>
+          <span>·</span>
+          <span className="text-gray-700" title="Tor / IPFS Redundancy active">Tor / IPFS Ready</span>
+        </div>
+      </div>
+
+      <p className="text-gray-700 text-xs pt-2">
         CC BY-NC 4.0 · {new Date().getFullYear()}
       </p>
     </footer>
