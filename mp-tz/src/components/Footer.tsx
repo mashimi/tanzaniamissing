@@ -18,11 +18,11 @@ export default function Footer() {
       <div className="pt-2 text-xs text-gray-500 space-y-1">
         <div className="text-gray-600 font-medium">{t("footer.mirror")}:</div>
         <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-gray-500">
-          <a href="https://tanzania.qd.je" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">tanzania.qd.je</a>
+          <a href="https://www.tanzania.qd.je" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">www.tanzania.qd.je</a>
           <span>·</span>
           <a href="https://mp-tz.pages.dev" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">mp-tz.pages.dev</a>
           <span>·</span>
-          <a href="https://mashimi.github.io/tanzaniamissing" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">GitHub Mirror</a>
+          <a href="https://mirror.tanzania.qd.je" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">mirror.tanzania.qd.je</a>
           <span>·</span>
           <span className="text-gray-700" title="Tor / IPFS Redundancy active">Tor / IPFS Ready</span>
         </div>
