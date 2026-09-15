@@ -2,7 +2,7 @@
   {
     "id": "0011-junior-jonathan",
     "full_name": "Junior Jonathan",
-    "age": null,
+    "age": 22,
     "gender": "male",
     "photo_path": "",
     "last_seen_date": "2026-08-27",
@@ -14,7 +14,7 @@
       "district": "Bagamoyo"
     },
     "status": "missing",
-    "circumstances": "Student. Reportedly abducted by armed men on 27 August 2026 at Bagamoyo, Coast region; the abduction was filmed by residents. He has not been seen since. Reported motivation: his breakup with his girlfriend Ruiya, daughter of Gwandise Jumanne Kelegele, a security officer whose work station is State House, Dar es Salaam. (From a social-media report — pending independent verification.)",
+    "circumstances": "Student. Reportedly abducted by armed men on 27 August 2026 at Bagamoyo, Coast region; the abduction was filmed by residents. He has not been seen since. Reported motivation: his breakup with his girlfriend Ruiya, daughter of Gwandise Jumanne Kelegele, a security officer whose work station is State House, Dar es Salaam. (From social-media reports and his mother's public appeal — pending independent verification.)",
     "tags": [
       "bagamoyo",
       "pwani",
@@ -22,7 +22,10 @@
       "reported abduction"
     ],
     "verified": false,
-    "sources": [],
+    "sources": [
+      "https://x.com/MariaSTsehai/status/2097899152722034807",
+      "https://www.instagram.com/reel/Dc8uFa4Bvhv/"
+    ],
     "is_public": true,
     "created_at": "2026-09-11T09:00:00Z"
   },
@@ -32,7 +35,7 @@
     "age": null,
     "gender": "male",
     "photo_path": "https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/0106/live/26be9b80-a337-11f0-92db-77261a15b9d2.jpg.webp",
-    "last_seen_date": "2025-10-15",
+    "last_seen_date": "2025-10-06",
     "location": {
       "name": "Dar es Salaam",
       "latitude": -6.79,
@@ -41,138 +44,17 @@
       "district": ""
     },
     "status": "missing",
-    "circumstances": "Former ambassador and government critic. Reportedly abducted in Dar es Salaam in October 2025. (Date approximate.)",
+    "circumstances": "Former ambassador and government critic. Reportedly abducted from his home in Dar es Salaam on 6 October 2025; his family reported the incident to police the next morning and his lawyer filed a habeas corpus application.",
     "tags": [
       "dar es salaam",
       "opposition",
       "government critic"
     ],
-    "verified": false,
-    "sources": [],
-    "is_public": true,
-    "created_at": "2026-09-11T09:00:00Z"
-  },
-  {
-    "id": "0007-ali-mohamed-kibao",
-    "full_name": "Ali Mohamed Kibao",
-    "age": null,
-    "gender": "male",
-    "photo_path": "",
-    "last_seen_date": "2025-09-15",
-    "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
-      "district": ""
-    },
-    "status": "found_deceased",
-    "circumstances": "CHADEMA party official. Abducted in September 2025 and later found dead. (Date approximate.)",
-    "tags": [
-      "chadema",
-      "opposition"
+    "verified": true,
+    "sources": [
+      "https://www.bbc.com/news/articles/cq6536j86qzo",
+      "https://www.amnesty.org/en/latest/news/2025/10/tanzania-fears-mount-over-disappearance-of-government-critic-humphery-pole-pole"
     ],
-    "verified": false,
-    "sources": [],
-    "is_public": true,
-    "created_at": "2026-09-11T09:00:00Z"
-  },
-  {
-    "id": "0003-deusdedith-soka",
-    "full_name": "Deusdedith Soka",
-    "age": null,
-    "gender": "male",
-    "photo_path": "https://www.jamiiforums.com/attachments/20240826_192923-jpg.3080803/",
-    "last_seen_date": "2025-08-15",
-    "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
-      "district": ""
-    },
-    "status": "missing",
-    "circumstances": "CHADEMA opposition member. Abducted by unidentified men in August 2025 and remains missing. (Date approximate.)",
-    "tags": [
-      "chadema",
-      "opposition"
-    ],
-    "verified": false,
-    "sources": [],
-    "is_public": true,
-    "created_at": "2026-09-11T09:00:00Z"
-  },
-  {
-    "id": "0004-jacob-godwin-mlay",
-    "full_name": "Jacob Godwin Mlay",
-    "age": null,
-    "gender": "male",
-    "photo_path": "",
-    "last_seen_date": "2025-08-15",
-    "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
-      "district": ""
-    },
-    "status": "missing",
-    "circumstances": "Abducted alongside Deusdedith Soka in August 2025. (Date approximate.)",
-    "tags": [
-      "chadema",
-      "opposition"
-    ],
-    "verified": false,
-    "sources": [],
-    "is_public": true,
-    "created_at": "2026-09-11T09:00:00Z"
-  },
-  {
-    "id": "0005-frank-mbise",
-    "full_name": "Frank Mbise",
-    "age": null,
-    "gender": "male",
-    "photo_path": "",
-    "last_seen_date": "2025-08-15",
-    "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
-      "district": ""
-    },
-    "status": "missing",
-    "circumstances": "Abducted alongside Deusdedith Soka in August 2025. (Date approximate.)",
-    "tags": [
-      "chadema",
-      "opposition"
-    ],
-    "verified": false,
-    "sources": [],
-    "is_public": true,
-    "created_at": "2026-09-11T09:00:00Z"
-  },
-  {
-    "id": "0006-dioniz-kipanya",
-    "full_name": "Dioniz Kipanya",
-    "age": null,
-    "gender": "male",
-    "photo_path": "",
-    "last_seen_date": "2025-07-15",
-    "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
-      "district": ""
-    },
-    "status": "missing",
-    "circumstances": "Reported missing since July 2025. (Date approximate.)",
-    "tags": [
-      "opposition"
-    ],
-    "verified": false,
-    "sources": [],
     "is_public": true,
     "created_at": "2026-09-11T09:00:00Z"
   },
@@ -182,48 +64,26 @@
     "age": null,
     "gender": "male",
     "photo_path": "",
-    "last_seen_date": "2025-06-15",
+    "last_seen_date": "2025-06-16",
     "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
+      "name": "Dar es Salaam",
+      "latitude": -6.79,
+      "longitude": 39.21,
+      "region": "Dar es Salaam",
       "district": ""
     },
     "status": "found_alive",
-    "circumstances": "Frequent government critic on social media. Severely beaten by attackers in June 2025. (Date approximate.)",
+    "circumstances": "Frequent government critic on social media. Beaten with a metal bar by unidentified assailants in Dar es Salaam on 16 June 2025 until he lost consciousness; while awaiting hospital surgery, people dressed as doctors entered his room and attacked him again, according to Human Rights Watch.",
     "tags": [
       "government critic",
-      "social media"
+      "social media",
+      "dar es salaam"
     ],
-    "verified": false,
-    "sources": [],
-    "is_public": true,
-    "created_at": "2026-09-11T09:00:00Z"
-  },
-  {
-    "id": "0002-mpaluka-nyagali-mdude",
-    "full_name": "Mpaluka Nyagali (Mdude)",
-    "age": null,
-    "gender": "male",
-    "photo_path": "https://upload.wikimedia.org/wikipedia/commons/c/c8/HQ1_7353.jpg",
-    "last_seen_date": "2025-05-15",
-    "location": {
-      "name": "Mbeya",
-      "latitude": -8.91,
-      "longitude": 33.46,
-      "region": "Mbeya",
-      "district": ""
-    },
-    "status": "missing",
-    "circumstances": "Opposition activist, widely known as Mdude. Abducted from his home in Mbeya in May 2025; his whereabouts remain unknown. (Date approximate.)",
-    "tags": [
-      "mbeya",
-      "opposition",
-      "activist"
+    "verified": true,
+    "sources": [
+      "https://www.hrw.org/news/2025/09/29/tanzania-deepening-repression-threatens-elections",
+      "https://monitor.civicus.org/explore/government-intensifies-crackdown-on-opposition-online-spaces-ahead-of-2025-elections/"
     ],
-    "verified": false,
-    "sources": [],
     "is_public": true,
     "created_at": "2026-09-11T09:00:00Z"
   },
@@ -233,23 +93,200 @@
     "age": null,
     "gender": "male",
     "photo_path": "",
-    "last_seen_date": "2025-05-15",
+    "last_seen_date": "2025-05-19",
     "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
+      "name": "Dar es Salaam",
+      "latitude": -6.79,
+      "longitude": 39.21,
+      "region": "Dar es Salaam",
       "district": ""
     },
     "status": "found_alive",
-    "circumstances": "Kenyan activist who suffered enforced disappearance and severe torture in Tanzania in May 2025. (Date approximate.)",
+    "circumstances": "Kenyan human rights activist. Arrested in Dar es Salaam on 19 May 2025 while attending the treason trial of Tanzanian opposition leader Tundu Lissu, held incommunicado and tortured, then released at the Kenya–Tanzania border on 22 May 2025 with signs of severe torture.",
     "tags": [
       "activist",
       "torture",
       "kenya"
     ],
-    "verified": false,
-    "sources": [],
+    "verified": true,
+    "sources": [
+      "https://www.amnesty.org/en/latest/news/2025/05/tanzania-torture-and-forcible-deportation-of-kenyan-and-ugandan-activists-must-be-urgently-investigated/",
+      "https://www.theguardian.com/world/2025/jun/29/activists-boniface-mwangi-agather-atuhaire-tanzania"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-11T09:00:00Z"
+  },
+  {
+    "id": "0002-mpaluka-nyagali-mdude",
+    "full_name": "Mpaluka Nyagali (Mdude)",
+    "age": null,
+    "gender": "male",
+    "photo_path": "https://upload.wikimedia.org/wikipedia/commons/c/c8/HQ1_7353.jpg",
+    "last_seen_date": "2025-05-02",
+    "location": {
+      "name": "Mbeya",
+      "latitude": -8.91,
+      "longitude": 33.46,
+      "region": "Mbeya",
+      "district": ""
+    },
+    "status": "missing",
+    "circumstances": "Opposition activist, widely known as Mdude. Violently attacked and abducted from his home in Mbeya on the night of 2 May 2025 by unidentified individuals; his whereabouts remain unknown.",
+    "tags": [
+      "mbeya",
+      "opposition",
+      "activist"
+    ],
+    "verified": true,
+    "sources": [
+      "https://www.bbc.com/news/articles/c78zdzvgw90o",
+      "https://thechanzo.com/2025/05/03/tanzanian-activist-mdude-nyagali-remains-missing-following-bloody-attack-at-his-home-police-deny-involvement/"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-11T09:00:00Z"
+  },
+  {
+    "id": "0007-ali-mohamed-kibao",
+    "full_name": "Ali Mohamed Kibao",
+    "age": 69,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2024-09-06",
+    "location": {
+      "name": "Dar es Salaam",
+      "latitude": -6.79,
+      "longitude": 39.21,
+      "region": "Dar es Salaam",
+      "district": ""
+    },
+    "status": "found_deceased",
+    "circumstances": "Member of the CHADEMA secretariat. Abducted from a bus travelling from Dar es Salaam to Tanga on 6 September 2024 by armed men; his body was found in Ununio, Dar es Salaam, on 7 September 2024 with signs of torture, including acid poured on his face.",
+    "tags": [
+      "chadema",
+      "opposition",
+      "dar es salaam"
+    ],
+    "verified": true,
+    "sources": [
+      "https://www.reuters.com/world/africa/abducted-tanzanian-opposition-offical-found-dead-acid-poured-face-2024-09-09",
+      "https://www.aljazeera.com/news/2024/9/9/slain-tanzanian-opposition-figure-beaten-doused-with-acid-party"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-11T09:00:00Z"
+  },
+  {
+    "id": "0003-deusdedith-soka",
+    "full_name": "Deusdedith Soka",
+    "age": null,
+    "gender": "male",
+    "photo_path": "https://www.jamiiforums.com/attachments/20240826_192923-jpg.3080803/",
+    "last_seen_date": "2024-08-18",
+    "location": {
+      "name": "Buza, Dar es Salaam",
+      "latitude": -6.79,
+      "longitude": 39.21,
+      "region": "Dar es Salaam",
+      "district": "Temeke"
+    },
+    "status": "missing",
+    "circumstances": "CHADEMA youth leader. Abducted by unidentified men in the Buza area, Dar es Salaam, on 18 August 2024, along with two colleagues; remains missing.",
+    "tags": [
+      "chadema",
+      "opposition",
+      "dar es salaam"
+    ],
+    "verified": true,
+    "sources": [
+      "https://thechanzo.com/2024/08/29/abducted-activist-deusdedith-soka-feared-for-his-life-but-had-limited-protection-options-they-are-snatching-us-like-chickens/",
+      "https://thechanzo.com/2025/08/18/one-year-on-chadema-honors-deusdedith-soka-amid-unsolved-disappearance/",
+      "https://www.jamiiforums.com/attachments/20240826_192923-jpg.3080803/"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-11T09:00:00Z"
+  },
+  {
+    "id": "0004-jacob-godwin-mlay",
+    "full_name": "Jacob Godwin Mlay",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2024-08-18",
+    "location": {
+      "name": "Buza, Dar es Salaam",
+      "latitude": -6.79,
+      "longitude": 39.21,
+      "region": "Dar es Salaam",
+      "district": "Temeke"
+    },
+    "status": "missing",
+    "circumstances": "CHADEMA opposition leader in Temeke. Abducted alongside Deusdedith Soka and Frank Mbise by unidentified men in the Buza area, Dar es Salaam, on 18 August 2024; remains missing.",
+    "tags": [
+      "chadema",
+      "opposition",
+      "dar es salaam"
+    ],
+    "verified": true,
+    "sources": [
+      "https://www.hrw.org/news/2024/09/25/tanzania-authorities-arrest-opposition-politicians",
+      "https://thechanzo.com/2024/08/29/abducted-activist-deusdedith-soka-feared-for-his-life-but-had-limited-protection-options-they-are-snatching-us-like-chickens/"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-11T09:00:00Z"
+  },
+  {
+    "id": "0005-frank-mbise",
+    "full_name": "Frank Mbise",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2024-08-18",
+    "location": {
+      "name": "Buza, Dar es Salaam",
+      "latitude": -6.79,
+      "longitude": 39.21,
+      "region": "Dar es Salaam",
+      "district": "Temeke"
+    },
+    "status": "missing",
+    "circumstances": "Motorcycle taxi driver who worked for CHADEMA activist Deusdedith Soka. Abducted alongside Soka and Jacob Godwin Mlay by unidentified men in the Buza area, Dar es Salaam, on 18 August 2024; remains missing.",
+    "tags": [
+      "chadema",
+      "opposition",
+      "dar es salaam"
+    ],
+    "verified": true,
+    "sources": [
+      "https://www.hrw.org/news/2024/09/25/tanzania-authorities-arrest-opposition-politicians",
+      "https://thechanzo.com/2024/08/29/abducted-activist-deusdedith-soka-feared-for-his-life-but-had-limited-protection-options-they-are-snatching-us-like-chickens/"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-11T09:00:00Z"
+  },
+  {
+    "id": "0006-dioniz-kipanya",
+    "full_name": "Dioniz Kipanya",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2024-07-15",
+    "location": {
+      "name": "Rukwa",
+      "latitude": -7.9,
+      "longitude": 32.05,
+      "region": "Rukwa",
+      "district": ""
+    },
+    "status": "missing",
+    "circumstances": "CHADEMA party official. Reportedly disappeared in July 2024; his whereabouts remain unknown. (Day approximate.)",
+    "tags": [
+      "opposition",
+      "chadema"
+    ],
+    "verified": true,
+    "sources": [
+      "https://www.hrw.org/news/2024/09/25/tanzania-authorities-arrest-opposition-politicians",
+      "https://thechanzo.com/2024/08/05/utata-kupotea-kwa-kiongozi-mwingine-wa-chadema-polisi-rukwa-wasema-hakuna-utekaji/"
+    ],
     "is_public": true,
     "created_at": "2026-09-11T09:00:00Z"
   },
@@ -259,21 +296,26 @@
     "age": null,
     "gender": "male",
     "photo_path": "",
-    "last_seen_date": "2024-06-15",
+    "last_seen_date": "2024-06-23",
     "location": {
-      "name": "",
-      "latitude": -6.16,
-      "longitude": 35.75,
-      "region": "",
+      "name": "Dar es Salaam",
+      "latitude": -6.79,
+      "longitude": 39.21,
+      "region": "Dar es Salaam",
       "district": ""
     },
     "status": "found_alive",
-    "circumstances": "Abducted by plainclothes men in June 2024 and later abandoned far from home. (Date approximate.)",
+    "circumstances": "Government critic known online as Sativa. Abducted in Dar es Salaam on 23 June 2024, handcuffed, blindfolded and severely tortured, then abandoned with gunshot wounds in Katavi National Park, more than 1,000 km away, on 27 June 2024. He survived and later sought damages from the authorities.",
     "tags": [
-      "activist"
+      "activist",
+      "government critic",
+      "survivor"
     ],
-    "verified": false,
-    "sources": [],
+    "verified": true,
+    "sources": [
+      "https://www.bbc.com/news/articles/c78zdzvgw90o",
+      "https://thechanzo.com/2024/09/21/lawyers-for-torture-victim-edgar-mwakabela-seek-sh5b-in-damages-from-tanzanian-authorities"
+    ],
     "is_public": true,
     "created_at": "2026-09-11T09:00:00Z"
   }

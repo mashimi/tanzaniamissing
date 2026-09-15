@@ -4,21 +4,25 @@
   "age": null,
   "gender": "male",
   "photo_path": "",
-  "last_seen_date": "2025-07-15",
+  "last_seen_date": "2024-07-15",
   "location": {
-    "name": "",
-    "latitude": -6.163,
-    "longitude": 35.7515,
-    "region": "",
+    "name": "Rukwa",
+    "latitude": -7.9,
+    "longitude": 32.05,
+    "region": "Rukwa",
     "district": ""
   },
   "status": "missing",
-  "circumstances": "Reported missing since July 2025. (Date approximate.)",
+  "circumstances": "CHADEMA party official. Reportedly disappeared in July 2024; his whereabouts remain unknown. (Day approximate.)",
   "tags": [
-    "opposition"
+    "opposition",
+    "chadema"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.hrw.org/news/2024/09/25/tanzania-authorities-arrest-opposition-politicians",
+    "https://thechanzo.com/2024/08/05/utata-kupotea-kwa-kiongozi-mwingine-wa-chadema-polisi-rukwa-wasema-hakuna-utekaji/"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }

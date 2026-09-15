@@ -4,22 +4,26 @@
   "age": null,
   "gender": "male",
   "photo_path": "",
-  "last_seen_date": "2025-06-15",
+  "last_seen_date": "2025-06-16",
   "location": {
-    "name": "",
-    "latitude": -6.163,
-    "longitude": 35.7515,
-    "region": "",
+    "name": "Dar es Salaam",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "region": "Dar es Salaam",
     "district": ""
   },
   "status": "found_alive",
-  "circumstances": "Frequent government critic on social media. Severely beaten by attackers in June 2025. (Date approximate.)",
+  "circumstances": "Frequent government critic on social media. Beaten with a metal bar by unidentified assailants in Dar es Salaam on 16 June 2025 until he lost consciousness; while awaiting hospital surgery, people dressed as doctors entered his room and attacked him again, according to Human Rights Watch.",
   "tags": [
     "government critic",
-    "social media"
+    "social media",
+    "dar es salaam"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.hrw.org/news/2025/09/29/tanzania-deepening-repression-threatens-elections",
+    "https://monitor.civicus.org/explore/government-intensifies-crackdown-on-opposition-online-spaces-ahead-of-2025-elections/"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }

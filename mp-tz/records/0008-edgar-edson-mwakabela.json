@@ -4,21 +4,26 @@
   "age": null,
   "gender": "male",
   "photo_path": "",
-  "last_seen_date": "2024-06-15",
+  "last_seen_date": "2024-06-23",
   "location": {
-    "name": "",
-    "latitude": -6.163,
-    "longitude": 35.7515,
-    "region": "",
+    "name": "Dar es Salaam",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "region": "Dar es Salaam",
     "district": ""
   },
   "status": "found_alive",
-  "circumstances": "Abducted by plainclothes men in June 2024 and later abandoned far from home. (Date approximate.)",
+  "circumstances": "Government critic known online as Sativa. Abducted in Dar es Salaam on 23 June 2024, handcuffed, blindfolded and severely tortured, then abandoned with gunshot wounds in Katavi National Park, more than 1,000 km away, on 27 June 2024. He survived and later sought damages from the authorities.",
   "tags": [
-    "activist"
+    "activist",
+    "government critic",
+    "survivor"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.bbc.com/news/articles/c78zdzvgw90o",
+    "https://thechanzo.com/2024/09/21/lawyers-for-torture-victim-edgar-mwakabela-seek-sh5b-in-damages-from-tanzanian-authorities"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }

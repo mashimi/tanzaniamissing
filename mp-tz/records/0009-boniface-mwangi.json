@@ -4,23 +4,26 @@
   "age": null,
   "gender": "male",
   "photo_path": "",
-  "last_seen_date": "2025-05-15",
+  "last_seen_date": "2025-05-19",
   "location": {
-    "name": "",
-    "latitude": -6.163,
-    "longitude": 35.7515,
-    "region": "",
+    "name": "Dar es Salaam",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "region": "Dar es Salaam",
     "district": ""
   },
   "status": "found_alive",
-  "circumstances": "Kenyan activist who suffered enforced disappearance and severe torture in Tanzania in May 2025. (Date approximate.)",
+  "circumstances": "Kenyan human rights activist. Arrested in Dar es Salaam on 19 May 2025 while attending the treason trial of Tanzanian opposition leader Tundu Lissu, held incommunicado and tortured, then released at the Kenya–Tanzania border on 22 May 2025 with signs of severe torture.",
   "tags": [
     "activist",
     "torture",
     "kenya"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.amnesty.org/en/latest/news/2025/05/tanzania-torture-and-forcible-deportation-of-kenyan-and-ugandan-activists-must-be-urgently-investigated/",
+    "https://www.theguardian.com/world/2025/jun/29/activists-boniface-mwangi-agather-atuhaire-tanzania"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }

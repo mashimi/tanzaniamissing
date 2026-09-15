@@ -4,22 +4,26 @@
   "age": null,
   "gender": "male",
   "photo_path": "",
-  "last_seen_date": "2025-08-15",
+  "last_seen_date": "2024-08-18",
   "location": {
-    "name": "",
-    "latitude": -6.163,
-    "longitude": 35.7515,
-    "region": "",
-    "district": ""
+    "name": "Buza, Dar es Salaam",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "region": "Dar es Salaam",
+    "district": "Temeke"
   },
   "status": "missing",
-  "circumstances": "Abducted alongside Deusdedith Soka in August 2025. (Date approximate.)",
+  "circumstances": "Motorcycle taxi driver who worked for CHADEMA activist Deusdedith Soka. Abducted alongside Soka and Jacob Godwin Mlay by unidentified men in the Buza area, Dar es Salaam, on 18 August 2024; remains missing.",
   "tags": [
     "chadema",
-    "opposition"
+    "opposition",
+    "dar es salaam"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.hrw.org/news/2024/09/25/tanzania-authorities-arrest-opposition-politicians",
+    "https://thechanzo.com/2024/08/29/abducted-activist-deusdedith-soka-feared-for-his-life-but-had-limited-protection-options-they-are-snatching-us-like-chickens/"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }

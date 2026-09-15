@@ -1,25 +1,29 @@
 {
   "id": "0007-ali-mohamed-kibao",
   "full_name": "Ali Mohamed Kibao",
-  "age": null,
+  "age": 69,
   "gender": "male",
   "photo_path": "",
-  "last_seen_date": "2025-09-15",
+  "last_seen_date": "2024-09-06",
   "location": {
-    "name": "",
-    "latitude": -6.163,
-    "longitude": 35.7515,
-    "region": "",
+    "name": "Dar es Salaam",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "region": "Dar es Salaam",
     "district": ""
   },
   "status": "found_deceased",
-  "circumstances": "CHADEMA party official. Abducted in September 2025 and later found dead. (Date approximate.)",
+  "circumstances": "Member of the CHADEMA secretariat. Abducted from a bus travelling from Dar es Salaam to Tanga on 6 September 2024 by armed men; his body was found in Ununio, Dar es Salaam, on 7 September 2024 with signs of torture, including acid poured on his face.",
   "tags": [
     "chadema",
-    "opposition"
+    "opposition",
+    "dar es salaam"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.reuters.com/world/africa/abducted-tanzanian-opposition-offical-found-dead-acid-poured-face-2024-09-09",
+    "https://www.aljazeera.com/news/2024/9/9/slain-tanzanian-opposition-figure-beaten-doused-with-acid-party"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }

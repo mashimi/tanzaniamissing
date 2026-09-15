@@ -4,7 +4,7 @@
   "age": null,
   "gender": "male",
   "photo_path": "https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/0106/live/26be9b80-a337-11f0-92db-77261a15b9d2.jpg.webp",
-  "last_seen_date": "2025-10-15",
+  "last_seen_date": "2025-10-06",
   "location": {
     "name": "Dar es Salaam",
     "latitude": -6.7924,
@@ -13,14 +13,17 @@
     "district": ""
   },
   "status": "missing",
-  "circumstances": "Former ambassador and government critic. Reportedly abducted in Dar es Salaam in October 2025. (Date approximate.)",
+  "circumstances": "Former ambassador and government critic. Reportedly abducted from his home in Dar es Salaam on 6 October 2025; his family reported the incident to police the next morning and his lawyer filed a habeas corpus application.",
   "tags": [
     "dar es salaam",
     "opposition",
     "government critic"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.bbc.com/news/articles/cq6536j86qzo",
+    "https://www.amnesty.org/en/latest/news/2025/10/tanzania-fears-mount-over-disappearance-of-government-critic-humphery-pole-pole"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }

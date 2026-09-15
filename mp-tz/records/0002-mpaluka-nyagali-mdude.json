@@ -4,7 +4,7 @@
   "age": null,
   "gender": "male",
   "photo_path": "https://upload.wikimedia.org/wikipedia/commons/c/c8/HQ1_7353.jpg",
-  "last_seen_date": "2025-05-15",
+  "last_seen_date": "2025-05-02",
   "location": {
     "name": "Mbeya",
     "latitude": -8.9072,
@@ -13,14 +13,17 @@
     "district": ""
   },
   "status": "missing",
-  "circumstances": "Opposition activist, widely known as Mdude. Abducted from his home in Mbeya in May 2025; his whereabouts remain unknown. (Date approximate.)",
+  "circumstances": "Opposition activist, widely known as Mdude. Violently attacked and abducted from his home in Mbeya on the night of 2 May 2025 by unidentified individuals; his whereabouts remain unknown.",
   "tags": [
     "mbeya",
     "opposition",
     "activist"
   ],
-  "verified": false,
-  "sources": [],
+  "verified": true,
+  "sources": [
+    "https://www.bbc.com/news/articles/c78zdzvgw90o",
+    "https://thechanzo.com/2025/05/03/tanzanian-activist-mdude-nyagali-remains-missing-following-bloody-attack-at-his-home-police-deny-involvement/"
+  ],
   "is_public": true,
   "created_at": "2026-09-11T09:00:00Z"
 }
