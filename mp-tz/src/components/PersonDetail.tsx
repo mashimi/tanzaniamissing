@@ -136,10 +136,10 @@ export default function PersonDetail({ p }: { p: Person }) {
                 </Link>
               </p>
               <p className="text-gray-500 text-sm mt-2">
-                Prefer to talk to a person? Message the team directly on Signal:{" "}
-                <a href="https://signal.me/#p/+[REDACTED]" target="_blank" rel="noopener noreferrer"
-                  className="text-yellow-400 hover:underline font-medium whitespace-nowrap">
-                  +49 1768 2648029
+                Prefer to talk to a person?{" "}
+                <a href="/api/signal" target="_blank" rel="noopener noreferrer"
+                  className="text-yellow-400 hover:underline font-medium">
+                  Message the team on Signal →
                 </a>
               </p>
             </div>

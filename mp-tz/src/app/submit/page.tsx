@@ -76,9 +76,9 @@ function SubmitForm() {
           <span className="text-yellow-400 text-lg shrink-0 mt-0.5">⚠️</span>
           <p className="text-yellow-200 text-sm leading-relaxed">
             {t("submit.signal_note")}{" "}
-            <a href="https://signal.me/#p/+[REDACTED]" target="_blank" rel="noopener noreferrer"
-              className="text-yellow-400 hover:underline font-medium whitespace-nowrap">
-              Signal: +49 1768 2648029
+            <a href="/api/signal" target="_blank" rel="noopener noreferrer"
+              className="text-yellow-400 hover:underline font-medium">
+              Signal →
             </a>
           </p>
         </div>
