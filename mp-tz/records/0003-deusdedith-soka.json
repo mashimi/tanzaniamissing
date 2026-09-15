@@ -1,0 +1,25 @@
+{
+  "id": "0003-deusdedith-soka",
+  "full_name": "Deusdedith Soka",
+  "age": null,
+  "gender": "male",
+  "photo_path": "https://www.jamiiforums.com/attachments/20240826_192923-jpg.3080803/",
+  "last_seen_date": "2025-08-15",
+  "location": {
+    "name": "",
+    "latitude": -6.163,
+    "longitude": 35.7515,
+    "region": "",
+    "district": ""
+  },
+  "status": "missing",
+  "circumstances": "CHADEMA opposition member. Abducted by unidentified men in August 2025 and remains missing. (Date approximate.)",
+  "tags": [
+    "chadema",
+    "opposition"
+  ],
+  "verified": false,
+  "sources": [],
+  "is_public": true,
+  "created_at": "2026-09-11T09:00:00Z"
+}

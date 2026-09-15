@@ -1,0 +1,26 @@
+{
+  "id": "0001-humphrey-polepole",
+  "full_name": "Humphrey Polepole",
+  "age": null,
+  "gender": "male",
+  "photo_path": "https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/0106/live/26be9b80-a337-11f0-92db-77261a15b9d2.jpg.webp",
+  "last_seen_date": "2025-10-15",
+  "location": {
+    "name": "Dar es Salaam",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "region": "Dar es Salaam",
+    "district": ""
+  },
+  "status": "missing",
+  "circumstances": "Former ambassador and government critic. Reportedly abducted in Dar es Salaam in October 2025. (Date approximate.)",
+  "tags": [
+    "dar es salaam",
+    "opposition",
+    "government critic"
+  ],
+  "verified": false,
+  "sources": [],
+  "is_public": true,
+  "created_at": "2026-09-11T09:00:00Z"
+}
