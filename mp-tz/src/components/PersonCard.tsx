@@ -18,9 +18,9 @@ export default function PersonCard({ person: p, href }: { person: Person; href?:
     <a href={href ?? `/persons/${p.id}/`}
        className="group block bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-red-500/50 hover:ring-2 hover:ring-red-500/40 transition-all duration-200 shadow-lg hover:shadow-red-900/20">
       {p.photo_path ? (
-        <div className="relative overflow-hidden">
+        <div className="relative w-full h-52 overflow-hidden bg-gray-800">
           <Photo src={p.photo_path} alt={p.full_name}
-            className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300" />
+            className="absolute inset-0 w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-300" />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
         </div>
       ) : (

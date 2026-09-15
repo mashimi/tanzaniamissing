@@ -33,11 +33,13 @@ export default function PersonDetail({ p }: { p: Person }) {
           {/* Photo */}
           <div className="shrink-0">
             {p.photo_path ? (
-              <Photo
-                src={p.photo_path}
-                alt={p.full_name}
-                className="w-44 h-44 md:w-52 md:h-52 object-cover rounded-2xl border border-gray-800 shadow-xl"
-              />
+              <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-2xl overflow-hidden border border-gray-800 shadow-xl bg-gray-800">
+                <Photo
+                  src={p.photo_path}
+                  alt={p.full_name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
             ) : (
               <div className="w-44 h-44 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-800 flex items-center justify-center text-6xl text-gray-600 font-black select-none shadow-xl">
                 {initials}
