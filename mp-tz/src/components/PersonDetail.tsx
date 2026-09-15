@@ -127,10 +127,20 @@ export default function PersonDetail({ p }: { p: Person }) {
             <div>
               <h3 className="font-semibold text-yellow-400 text-sm">Have information about this case?</h3>
               <p className="text-gray-400 text-sm mt-1">
-                Submit a tip through our secure channel. Your identity will be protected.{" "}
-                <Link href="/submit/" className="text-yellow-400 hover:underline font-medium">
+                Report where and when you saw this person. Your identity will be protected.{" "}
+                <Link
+                  href={`/submit/?about=${encodeURIComponent(p.full_name)}&id=${encodeURIComponent(p.id)}`}
+                  className="text-yellow-400 hover:underline font-medium"
+                >
                   Report anonymously →
                 </Link>
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                Prefer to talk to a person? Message the team directly on Signal:{" "}
+                <a href="https://signal.me/#p/+[REDACTED]" target="_blank" rel="noopener noreferrer"
+                  className="text-yellow-400 hover:underline font-medium whitespace-nowrap">
+                  +49 1768 2648029
+                </a>
               </p>
             </div>
           </div>

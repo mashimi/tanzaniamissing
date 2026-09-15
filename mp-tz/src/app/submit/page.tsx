@@ -1,13 +1,28 @@
 "use client";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useI18n } from "@/i18n/I18nProvider";
 
 const inputClass = "w-full px-4 py-2.5 rounded-xl bg-gray-900 text-white border border-gray-800 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors text-sm placeholder-gray-600";
 const labelClass = "block text-sm text-gray-400 mt-5 mb-1.5 font-medium";
 
 export default function Submit() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-gray-950" />
+    }>
+      <SubmitForm />
+    </Suspense>
+  );
+}
+
+function SubmitForm() {
   const { t } = useI18n();
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const searchParams = useSearchParams();
+  const tipAbout = searchParams.get("about") ?? "";
+  const tipCaseId = searchParams.get("id") ?? "";
+  const isTip = Boolean(tipAbout);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -59,8 +74,25 @@ export default function Submit() {
         {/* Safety notice */}
         <div className="flex gap-3 p-4 bg-yellow-950/30 border border-yellow-900/50 rounded-xl mb-6">
           <span className="text-yellow-400 text-lg shrink-0 mt-0.5">⚠️</span>
-          <p className="text-yellow-200 text-sm leading-relaxed">{t("submit.signal_note")}</p>
+          <p className="text-yellow-200 text-sm leading-relaxed">
+            {t("submit.signal_note")}{" "}
+            <a href="https://signal.me/#p/+[REDACTED]" target="_blank" rel="noopener noreferrer"
+              className="text-yellow-400 hover:underline font-medium whitespace-nowrap">
+              Signal: +49 1768 2648029
+            </a>
+          </p>
         </div>
+
+        {/* Sighting-tip context banner */}
+        {isTip && (
+          <div className="flex gap-3 p-4 bg-blue-950/30 border border-blue-900/50 rounded-xl mb-6">
+            <span className="text-blue-400 text-lg shrink-0 mt-0.5">👁️</span>
+            <p className="text-blue-200 text-sm leading-relaxed">
+              {t("submit.tip_banner")} <strong className="text-white">{tipAbout}</strong>
+              {tipCaseId && <span className="text-blue-400/70 text-xs block mt-0.5">Case {tipCaseId}</span>}
+            </p>
+          </div>
+        )}
 
         {state === "error" && (
           <div className="flex gap-3 p-4 bg-red-950/40 border border-red-900/50 rounded-xl mb-6">
@@ -81,7 +113,9 @@ export default function Submit() {
             </h2>
 
             <label className={labelClass}>{t("submit.name_label")} *</label>
-            <input required name="full_name" className={inputClass} placeholder="e.g. Amina Hassan" />
+            <input required name="full_name" className={inputClass} placeholder="e.g. Amina Hassan"
+              defaultValue={tipAbout} readOnly={isTip} />
+            {tipCaseId && <input type="hidden" name="tip_case_id" value={tipCaseId} />}
 
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -130,10 +164,10 @@ export default function Submit() {
               What Happened
             </h2>
 
-            <label className={labelClass}>{t("submit.circumstances_label")} *</label>
+            <label className={labelClass}>{isTip ? t("submit.tip_circumstances_label") : t("submit.circumstances_label")} *</label>
             <textarea
               required name="circumstances" rows={6} className={inputClass}
-              placeholder="Describe the circumstances in as much detail as you know…"
+              placeholder={isTip ? t("submit.tip_placeholder") : "Describe the circumstances in as much detail as you know…"}
             />
           </div>
 
