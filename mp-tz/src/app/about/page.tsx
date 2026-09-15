@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/I18nProvider";
 
-const REPO_URL = "https://github.com/mashimi/tanzaniamissing";
-
 export default function AboutPage() {
   const { t } = useI18n();
 
@@ -28,12 +26,6 @@ export default function AboutPage() {
       icon: "✔️",
       title: t("about.verification_title"),
       body: [t("about.verification")],
-    },
-    {
-      icon: "🧩",
-      title: t("about.mirror_title"),
-      body: [t("about.mirror")],
-      repoLink: true,
     },
     {
       icon: "⚠️",
@@ -74,16 +66,6 @@ export default function AboutPage() {
                 className="inline-block mt-2 text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors"
               >
                 {t("about.protection_signal")}
-              </a>
-            )}
-            {s.repoLink && (
-              <a
-                href={REPO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-2 text-red-400 hover:text-red-300 text-sm font-medium transition-colors"
-              >
-                {t("about.repo_link")}
               </a>
             )}
           </section>

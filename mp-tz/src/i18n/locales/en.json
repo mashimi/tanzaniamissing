@@ -16,9 +16,6 @@
   "about.protection_signal": "Send a tip on Signal →",
   "about.verification_title": "Verification",
   "about.verification": "Every case requires at least two independent sources, or direct confirmation from the family, before it is marked as verified. Unverified cases are labelled as such. Corrections and removal requests from families are honoured.",
-  "about.mirror_title": "Run a mirror",
-  "about.mirror": "The full source code and all case records are published in our public repository. You can fork it and serve the static build from any static host — each mirror makes the record harder to erase.",
-  "about.repo_link": "Open the public repository →",
   "about.safety_title": "Safety notice",
   "about.safety": "If you are in danger, contact a trusted lawyer or a human-rights organisation such as the Legal and Human Rights Centre (LHRC) in Dar es Salaam. When documenting a case, put the family's safety first: get consent, and never share details that could identify a family at risk.",
 
