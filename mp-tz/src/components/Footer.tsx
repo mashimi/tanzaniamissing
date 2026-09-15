@@ -8,6 +8,8 @@ export default function Footer() {
       <div className="flex justify-center gap-4 text-xs text-gray-600 mb-2">
         <a href="/" className="hover:text-gray-400 transition-colors">Home</a>
         <span>·</span>
+        <a href="/about/" className="hover:text-gray-400 transition-colors">About</a>
+        <span>·</span>
         <a href="/submit/" className="hover:text-gray-400 transition-colors">Report</a>
       </div>
       <p className="text-gray-600 text-xs max-w-lg mx-auto leading-relaxed">

@@ -23,6 +23,7 @@ export default function Navbar() {
         {/* Desktop nav */}
         <div className="hidden sm:flex items-center gap-5 text-sm">
           <Link href="/" className="text-gray-400 hover:text-white transition-colors">{t("nav.home")}</Link>
+          <Link href="/about/" className="text-gray-400 hover:text-white transition-colors">{t("nav.about")}</Link>
           <Link
             href="/submit/"
             className="bg-red-600 hover:bg-red-500 text-white font-semibold px-4 py-1.5 rounded-lg transition-colors"
@@ -52,6 +53,9 @@ export default function Navbar() {
         <div className="sm:hidden bg-gray-950 border-t border-gray-800 px-4 pb-4 pt-3 space-y-3">
           <Link href="/" onClick={() => setOpen(false)} className="block text-gray-300 hover:text-white py-1">
             {t("nav.home")}
+          </Link>
+          <Link href="/about/" onClick={() => setOpen(false)} className="block text-gray-300 hover:text-white py-1">
+            {t("nav.about")}
           </Link>
           <Link href="/submit/" onClick={() => setOpen(false)}
             className="block bg-red-600 text-white font-semibold px-4 py-2 rounded-lg text-center">
