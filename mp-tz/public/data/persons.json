@@ -31,6 +31,38 @@
     "created_at": "2026-09-11T09:00:00Z"
   },
   {
+    "id": "0013-emmanuel-john-nchimbi",
+    "full_name": "Emmanuel John Nchimbi",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2026-08-25",
+    "location": {
+      "name": "Dodoma",
+      "latitude": -6.16,
+      "longitude": 35.75,
+      "region": "Dodoma",
+      "district": ""
+    },
+    "status": "missing",
+    "circumstances": "High-profile politician and diplomat who served as Vice President of the United Republic of Tanzania from November 2025, after a career spanning Minister of Home Affairs, Ambassador to Brazil and Egypt, and Secretary-General of the ruling CCM party. On 25 August 2026 he announced his resignation (effective 4 September 2026), and on 26 August 2026 CCM's Central Committee expelled him from the party, reportedly after he publicly broke ranks to speak out against the state's hard-handed tactics against the political opposition. Within days of stepping down he vanished from public view: former Prime Minister Joseph Sinde Warioba publicly raised concern, saying repeated calls to him went unanswered and his whereabouts were unknown. Tanzanian activists, including Maria Sarungi Tsehai, have reported that he is being held incommunicado under strict house arrest by state security forces, with his electronic devices confiscated — these reports remain unverified, and there has been no official or independent confirmation of his whereabouts or condition. (Day of last public appearance approximate.)",
+    "tags": [
+      "vice president",
+      "ccm",
+      "incommunicado",
+      "reported house arrest"
+    ],
+    "verified": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Emmanuel_Nchimbi",
+      "https://nation.africa/kenya/news/africa/tanzania-vice-president-emannuel-nchimbi-quits--5570192",
+      "https://nation.africa/kenya/news/africa/tanzania-s-ruling-party-expels-vp-nchimbi-names-ndejembi-successor-5572612",
+      "https://www.kenyans.co.ke/news/126605-tanzanias-ex-vp-emmanuel-nchimbi-unreachable-days-after-resignation-former-pm-says"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-16T09:45:00Z"
+  },
+  {
     "id": "0012-abdilah-mussa-banjoo",
     "full_name": "Abdilah Mussa (Banjoo)",
     "age": 54,
