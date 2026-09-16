@@ -33,9 +33,9 @@
   {
     "id": "0013-emmanuel-john-nchimbi",
     "full_name": "Emmanuel John Nchimbi",
-    "age": null,
+    "age": 55,
     "gender": "male",
-    "photo_path": "",
+    "photo_path": "/photos/emmanuel-nchimbi.jpg",
     "last_seen_date": "2026-08-25",
     "location": {
       "name": "Dodoma",
