@@ -173,6 +173,27 @@ export default function Moderate() {
     }
   }
 
+  async function unpublishCase(caseId: string) {
+    if (!token) return;
+    if (!confirm(`Unpublish ${caseId}? This removes it from the public registry immediately. The submission stays in the review queue if it came from one.`)) return;
+    setBusy(true);
+    setNotice(null);
+    try {
+      const res = await fetch("/api/moderate", {
+        method: "POST",
+        headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+        body: JSON.stringify({ action: "unpublish", case_id: caseId }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setNotice(`Unpublished ${caseId} — it is no longer on the public registry.`);
+      loadCases();
+    } catch {
+      setNotice("Unpublish failed — try again.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
   function toggle(id: number) {
     setSelected(prev => {
       const next = new Set(prev);
@@ -322,10 +343,16 @@ export default function Moderate() {
                 </p>
 
                 {!c.archived && (
-                  <button onClick={() => setArchiving(archiving === c.id ? null : c.id)}
-                    className="mt-3 px-4 py-2 rounded-xl bg-blue-800 hover:bg-blue-700 text-white font-semibold text-sm transition-colors">
-                    {archiving === c.id ? "Cancel" : "Archive & verify"}
-                  </button>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <button onClick={() => setArchiving(archiving === c.id ? null : c.id)}
+                      className="px-4 py-2 rounded-xl bg-blue-800 hover:bg-blue-700 text-white font-semibold text-sm transition-colors">
+                      {archiving === c.id ? "Cancel" : "Archive & verify"}
+                    </button>
+                    <button onClick={() => unpublishCase(c.id)} disabled={busy}
+                      className="px-4 py-2 rounded-xl bg-gray-800 hover:bg-red-900 disabled:opacity-40 text-gray-300 hover:text-white font-semibold text-sm transition-colors">
+                      Unpublish &amp; remove
+                    </button>
+                  </div>
                 )}
 
                 {archiving === c.id && (
