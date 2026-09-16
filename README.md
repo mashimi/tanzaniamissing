@@ -52,6 +52,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to report a case, suggest correct
 - **Suggest a correction** to an existing case: open a GitHub issue describing the correction and citing a source.
 - **Mirroring:** fork this repository and deploy the `mp-tz/` static build to any static hosting provider.
 
+## Security
+
+Vulnerabilities must be reported privately — never as public issues. See [SECURITY.md](SECURITY.md) for how to report, and for how private case submissions are protected.
+
 ## License
 
 Content is released under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
