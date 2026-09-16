@@ -4,7 +4,7 @@
   "age": null,
   "gender": "male",
   "photo_path": "/photos/dioniz-kipanya.jpg",
-  "last_seen_date": "2024-07-15",
+  "last_seen_date": "2024-07-26",
   "location": {
     "name": "Rukwa",
     "latitude": -7.9,
@@ -13,10 +13,12 @@
     "district": ""
   },
   "status": "missing",
-  "circumstances": "CHADEMA party official. Reportedly disappeared in July 2024; his whereabouts remain unknown. (Day approximate.)",
+  "circumstances": "Political activist, choir songwriter and composer, and CHADEMA official who served as the party's Secretary of Politics, Ideology and Propaganda for the Rukwa Region. On 26 July 2024, according to family accounts and local reports, he was at home during a family meeting when he received a phone call summoning him to the Central Police Station in Rukwa. He left for the station and never returned; his phone was switched off shortly after. Local police subsequently denied having him in custody. Before his disappearance he was a vocal government critic, notably recording a viral video criticizing the size and extravagance of President Samia Suluhu Hassan's official motorcade during a regional visit to Rukwa and Katavi. CHADEMA leader Tundu Lissu and human-rights organizations have repeatedly demanded investigations into his whereabouts, citing his case as part of a pattern of enforced disappearances targeting opposition figures in Tanzania. (Details per family accounts, The Chanzo and HRW.)",
   "tags": [
     "opposition",
-    "chadema"
+    "chadema",
+    "rukwa",
+    "government critic"
   ],
   "verified": true,
   "sources": [
