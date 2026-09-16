@@ -1,0 +1,30 @@
+{
+  "id": "0012-abdilah-mussa-banjoo",
+  "full_name": "Abdilah Mussa (Banjoo)",
+  "age": 54,
+  "gender": "male",
+  "photo_path": "",
+  "last_seen_date": "2026-02-12",
+  "location": {
+    "name": "Arusha",
+    "latitude": -3.3869,
+    "longitude": 36.683,
+    "region": "Arusha",
+    "district": "Arusha City"
+  },
+  "status": "found_deceased",
+  "circumstances": "Well-known minerals businessman in Arusha, popularly known as \"Banjoo\". Abducted by unidentified people on 12 February 2026 as he was leaving a gym beneath the Ngorongoro building in Arusha. His body was found on 18 February 2026 beside the road in the Bereko area, Kondoa district, Dodoma region, bearing severe injuries: broken arms and gouged eyes.",
+  "tags": [
+    "arusha",
+    "businessman",
+    "mining",
+    "abduction"
+  ],
+  "verified": true,
+  "sources": [
+    "https://www.mwananchi.co.tz/mw/habari/kitaifa/mfanyabiashara-ya-madini-arusha-auawa-kikatili-mikono-yavunjwa-macho-yatobolewa-5365154",
+    "https://www.mwananchi.co.tz/mw/habari/kitaifa/giza-nene-kutekwa-kuuawa-kwa-mfanyabiashara-banjoo-5366656"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-16T08:25:00Z"
+}
