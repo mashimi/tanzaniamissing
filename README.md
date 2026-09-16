@@ -46,6 +46,8 @@ Case statuses: `missing`, `found_alive`, `found_deceased`.
 
 ## Contributing
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to report a case, suggest corrections, add sources, or run a mirror, and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for our community standards.
+
 - **Report a case:** use the website's report form — that is the fastest and safest route.
 - **Suggest a correction** to an existing case: open a GitHub issue describing the correction and citing a source.
 - **Mirroring:** fork this repository and deploy the `mp-tz/` static build to any static hosting provider.
