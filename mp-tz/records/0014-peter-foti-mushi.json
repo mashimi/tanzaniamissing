@@ -1,0 +1,32 @@
+{
+  "id": "0014-peter-foti-mushi",
+  "full_name": "Peter Foti Mushi",
+  "age": 35,
+  "gender": "male",
+  "photo_path": "/photos/peter-foti-mushi.jpg",
+  "last_seen_date": "2026-08-12",
+  "location": {
+    "name": "Kariakoo, Dar es Salaam",
+    "latitude": -6.8225,
+    "longitude": 39.2725,
+    "region": "Dar es Salaam",
+    "district": "Ilala"
+  },
+  "status": "missing",
+  "circumstances": "Phone repairman based in Kariakoo, Dar es Salaam. According to activist Maria Sarungi Tsehai, he was abducted by plain-clothes policemen on 12 August 2026 and has not been seen since; she describes him as one of many young men abducted and disappeared into \"black sites\" since July. A family appeal identifies him as Peter Richard Mushi (35), resident of Yombo Relini, and CCTV footage circulating online purports to show the abduction in Kariakoo. No official confirmation.",
+  "tags": [
+    "dar es salaam",
+    "kariakoo",
+    "phone repairman",
+    "cctv",
+    "black sites"
+  ],
+  "verified": true,
+  "sources": [
+    "https://x.com/MariaSTsehai/status/2100288512129966096",
+    "https://www.instagram.com/reel/DdW4iTqwYJe/",
+    "https://www.facebook.com/watch/?v=4415001008646615"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-17T08:30:00Z"
+}
