@@ -29,6 +29,12 @@ export const metadata: Metadata = {
     "missing persons registry",
   ],
   alternates: { canonical: "/" },
+  // Ownership proof for Google Search Console (HTML HTML-tag method).
+  // The qd.je zone 308-redirects *.html URLs, so the HTML file method can
+  // never stabilize; this meta tag on the homepage is the stable token.
+  verification: {
+    google: "62EJ-Ifd9iZEXH-Y6GDqDfXjUaEMReh6Ha9_DwmaXZ8",
+  },
   openGraph: {
     type: "website",
     siteName: TITLE,

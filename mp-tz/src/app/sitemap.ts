@@ -6,9 +6,12 @@ const BASE = "https://www.tanzania.qd.je";
 
 interface CaseRecord {
   id: string;
+  updated_at?: string;
   created_at?: string;
 }
 
+// Build-time read of the verified verified records (same source of truth as
+// pages) so the sitemap always matches what the registry actually serves.
 export default function sitemap(): MetadataRoute.Sitemap {
   const dir = path.join(process.cwd(), "records");
   const records: CaseRecord[] = fs
@@ -26,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const casePages: MetadataRoute.Sitemap = records.map(r => ({
     url: `${BASE}/persons/${r.id}/`,
-    lastModified: r.created_at ? new Date(r.created_at) : now,
+    lastModified: r.updated_at ? new Date(r.updated_at) : r.created_at ? new Date(r.created_at) : now,
     changeFrequency: "weekly",
     priority: 0.7,
   }));
