@@ -1,0 +1,28 @@
+# Tanzania Missing Persons Registry
+
+> Independent, volunteer-maintained registry documenting cases of enforced disappearances and abductions in Tanzania, maintained by civil-society volunteers so that no one is forgotten.
+
+Canonical site: https://www.tanzania.qd.je (also served at https://tanzaniamissing.pages.dev)
+
+Key facts:
+
+- The registry is a public, searchable database of missing, found-alive, and deceased persons documented by civil-society volunteers in Tanzania.
+- Interfaces are bilingual: Swahili (default) and English.
+- Every case page includes the person's name, photo (where available), last-seen date and location, circumstances, verification status, and cited sources.
+- Verification policy: a case is marked verified only with at least two independent sources, or direct confirmation from the family. Unverified cases are labelled as such.
+- Case data is open JSON, one file per person, published in a public repository (github.com/mashimi/tanzaniamissing, directory mp-tz/records/). A combined data file is available at https://www.tanzania.qd.je/data/persons.json
+- Anyone can mirror the registry by forking the repository and serving the static build from any static host.
+- Reports are submitted anonymously via https://www.tanzania.qd.je/submit/ and reviewed by a private moderation team before publication. Nothing is published automatically.
+- Corrections and removal requests from families are honoured.
+
+Important pages:
+
+- Home / search: https://www.tanzania.qd.je/
+- About the registry: https://www.tanzania.qd.je/about/
+- Report a case: https://www.tanzania.qd.je/submit/
+- Case pages: https://www.tanzania.qd.je/persons/{id}/ (see sitemap.xml)
+- Case data (JSON): https://www.tanzania.qd.je/data/persons.json
+
+Notable documented cases include the disappearances of government critic Humphrey Herson Polepole (October 2025), activist Mpaluka Nyagali "Mdude" (May 2025), CHADEMA officials Ali Mohamed Kibao (found dead, September 2024) and Dioniz Kipanya (July 2024), the survival account of activist Edgar "Sativa" Mwakabela (June 2024), the killing of Arusha businessman Abdilah "Banjoo" Mussa (February 2026), and the reported incommunicado detention of former Vice President Emmanuel John Nchimbi (August 2026, unconfirmed).
+
+Content license: CC BY-NC 4.0. This registry is not an official government record; where an allegation has not been independently confirmed by established media, the description attributes the claim to its source.
