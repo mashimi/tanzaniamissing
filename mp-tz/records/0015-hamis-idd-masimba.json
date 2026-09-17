@@ -1,0 +1,30 @@
+{
+  "id": "0015-hamis-idd-masimba",
+  "full_name": "Hamis Idd Masimba",
+  "age": 24,
+  "gender": "male",
+  "photo_path": "",
+  "last_seen_date": "2026-09-12",
+  "location": {
+    "name": "Murieti, Arusha",
+    "latitude": -3.39,
+    "longitude": 36.72,
+    "region": "Arusha",
+    "district": "Arusha City"
+  },
+  "status": "found_deceased",
+  "circumstances": "Bodaboda (motorcycle taxi) driver based at the Mlima CCM stand in Murieti ward, Arusha. He was reported missing in the days before his body was found on Saturday 12 September 2026, dumped inside an unfinished building in the Bondeni area of Murieti, with the throat cut and eyes gouged out; his motorcycle has not been found. After he disappeared, his phone was reportedly found by an unknown person who asked the family to pay TZS 10,000 for its return before cutting off contact. Investigation ongoing; no official confirmation of the perpetrators. (Last-seen date approximate.)",
+  "tags": [
+    "arusha",
+    "murieti",
+    "bodaboda"
+  ],
+  "verified": true,
+  "sources": [
+    "https://www.facebook.com/Jambotvtz/videos/1755946099059135/",
+    "https://x.com/eastafricatv/status/2099031922479354343",
+    "https://www.instagram.com/p/DdMdV9YNYVN/"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-17T14:02:00Z"
+}

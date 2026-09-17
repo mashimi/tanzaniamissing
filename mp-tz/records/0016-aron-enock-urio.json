@@ -1,0 +1,31 @@
+{
+  "id": "0016-aron-enock-urio",
+  "full_name": "Aron Enock Urio",
+  "age": null,
+  "gender": "male",
+  "photo_path": "",
+  "last_seen_date": "2026-08-27",
+  "location": {
+    "name": "Tengeru, Arumeru",
+    "latitude": -3.37,
+    "longitude": 36.85,
+    "region": "Arusha",
+    "district": "Arumeru"
+  },
+  "status": "found_deceased",
+  "circumstances": "Bodaboda (motorcycle taxi) driver operating in the Tengeru Kwa Fundi area, Arumeru district, Arusha region. He went missing for several days before his body was discovered in a field at Kitongoji Madira, Singisi village, Sela Singisi ward, Arumeru, bearing multiple injuries including gouged eyes. The landowner found the body while tending his crops in the morning and reported it to the authorities; police collected the body and took it to the mortuary. Investigation ongoing. (Last-seen date approximate.)",
+  "tags": [
+    "arusha",
+    "arumeru",
+    "bodaboda",
+    "tengeru"
+  ],
+  "verified": true,
+  "sources": [
+    "https://www.jamiiforums.com/threads/mwili-wa-dereva-bodaboda-aron-enock-urio-waokotwa-shambani-arumeru-baada-ya-kupotea-kwa-siku-kadhaa.2468470/",
+    "https://x.com/eastafricatv/status/2094731422418284679",
+    "https://www.instagram.com/reel/DcwDD-vCIey/"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-17T14:02:00Z"
+}
