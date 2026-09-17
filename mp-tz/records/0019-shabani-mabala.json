@@ -1,0 +1,30 @@
+{
+  "id": "0019-shabani-mabala",
+  "full_name": "Shabani Mabala",
+  "age": null,
+  "gender": "male",
+  "photo_path": "",
+  "last_seen_date": "2025-11-29",
+  "location": {
+    "name": "Geita Mjini, Geita",
+    "latitude": -2.87,
+    "longitude": 32.77,
+    "region": "Geita",
+    "district": "Geita Town"
+  },
+  "status": "missing",
+  "circumstances": "CHADEMA member living in Geita Mjini, Geita region. According to an alert shared on X and amplified by CHADEMA channels, on 29 November 2025 he was taken by individuals who identified themselves as police officers. Family members and CHADEMA leaders checked local police stations, where they say they received no cooperation and were instead threatened with arrest. His whereabouts remain unknown. No official confirmation.",
+  "tags": [
+    "geita",
+    "chadema",
+    "opposition"
+  ],
+  "verified": true,
+  "sources": [
+    "https://x.com/HildaNewton21/status/1995040945759244514",
+    "https://www.instagram.com/p/DRrB_iejKpt/",
+    "https://www.facebook.com/ChademaInBlood/posts/1382592556556006/"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-17T14:30:00Z"
+}

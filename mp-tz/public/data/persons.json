@@ -156,6 +156,66 @@
     "created_at": "2026-09-17T08:30:00Z"
   },
   {
+    "id": "0017-ramadhani-hussen-akila",
+    "full_name": "Ramadhani Hussen Akila",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2026-08-01",
+    "location": {
+      "name": "Kawe, Dar es Salaam",
+      "latitude": -6.77,
+      "longitude": 39.25,
+      "region": "Dar es Salaam",
+      "district": "Kinondoni"
+    },
+    "status": "missing",
+    "circumstances": "Bodaboda (motorcycle taxi) driver based in Kawe, Dar es Salaam. According to an appeal shared by his pregnant wife and amplified by media pages and activists, on Saturday 1 August 2026 in the evening, about five men arrived at his home in Kawe identifying themselves as law-enforcement officials and took him away. His whereabouts remain unknown; his wife has publicly asked for help locating him. No official confirmation.",
+    "tags": [
+      "dar es salaam",
+      "kawe",
+      "bodaboda"
+    ],
+    "verified": true,
+    "sources": [
+      "https://www.instagram.com/p/Dc7ryYdossf/",
+      "https://www.threads.com/@e_plus_media/post/Dc8s7xRE8HA/ametekwa-mke-anaomba-msaada-ameachwa-na-ujauzito-pichani-anaitwa-ramadhani/"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-17T14:30:00Z"
+  },
+  {
+    "id": "0018-david-jumbe",
+    "full_name": "David Jumbe (Djumbe)",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2026-05-20",
+    "location": {
+      "name": "Bunju (Mabwepande), Dar es Salaam",
+      "latitude": -6.66,
+      "longitude": 39.23,
+      "region": "Dar es Salaam",
+      "district": "Kinondoni"
+    },
+    "status": "found_alive",
+    "circumstances": "Personal assistant to jailed CHADEMA chairman Tundu Lissu. On 20 May 2026 around 10 pm, near his home in the Bunju/Mabwepande area of Dar es Salaam, his car was blocked by a Toyota Probox and two motorcycles; five to six men identifying themselves as police officers pulled him out, handcuffed him, beat him with gun butts, and drove him away toward an intelligence-security forest area near Mbweni while pursuing bodaboda riders followed. When the captors stopped to fire on the pursuers, he escaped from the vehicle's boot into the forest and crawled out overnight, arriving home on the morning of 21 May 2026 in poor condition and still handcuffed. His full first-person account was published by The Chanzo; police later issued a statement on the incident.",
+    "tags": [
+      "dar es salaam",
+      "bunju",
+      "chadema",
+      "tundu lissu"
+    ],
+    "verified": true,
+    "sources": [
+      "https://thechanzo.com/2026/05/22/a-full-account-of-the-foiled-abduction-of-david-djumbe-personal-assistant-to-tanzanian-opposition-leader-tundu-lissu/",
+      "https://x.com/rugemeleza/status/2057358685668516352",
+      "https://www.youtube.com/watch?v=APdnxHc2Rzk"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-17T14:30:00Z"
+  },
+  {
     "id": "0012-abdilah-mussa-banjoo",
     "full_name": "Abdilah Mussa (Banjoo)",
     "age": 54,
@@ -184,6 +244,66 @@
     ],
     "is_public": true,
     "created_at": "2026-09-16T08:25:00Z"
+  },
+  {
+    "id": "0019-shabani-mabala",
+    "full_name": "Shabani Mabala",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2025-11-29",
+    "location": {
+      "name": "Geita Mjini, Geita",
+      "latitude": -2.87,
+      "longitude": 32.77,
+      "region": "Geita",
+      "district": "Geita Town"
+    },
+    "status": "missing",
+    "circumstances": "CHADEMA member living in Geita Mjini, Geita region. According to an alert shared on X and amplified by CHADEMA channels, on 29 November 2025 he was taken by individuals who identified themselves as police officers. Family members and CHADEMA leaders checked local police stations, where they say they received no cooperation and were instead threatened with arrest. His whereabouts remain unknown. No official confirmation.",
+    "tags": [
+      "geita",
+      "chadema",
+      "opposition"
+    ],
+    "verified": true,
+    "sources": [
+      "https://x.com/HildaNewton21/status/1995040945759244514",
+      "https://www.instagram.com/p/DRrB_iejKpt/",
+      "https://www.facebook.com/ChademaInBlood/posts/1382592556556006/"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-17T14:30:00Z"
+  },
+  {
+    "id": "0020-mussa-ndile",
+    "full_name": "Mussa Ndile",
+    "age": null,
+    "gender": "male",
+    "photo_path": "",
+    "last_seen_date": "2025-11-27",
+    "location": {
+      "name": "Simu 2000, Dar es Salaam",
+      "latitude": -6.82,
+      "longitude": 39.28,
+      "region": "Dar es Salaam",
+      "district": "Ilala"
+    },
+    "status": "missing",
+    "circumstances": "Chairman of the street vendors (machinga) at the Simu 2000 market in Dar es Salaam — a role confirmed by Tanzanian media including The Citizen. According to alerts shared on X and CHADEMA-aligned pages, on 27 November 2025 he was taken by individuals who identified themselves as police officers. Relatives report checking multiple police stations without finding him. His whereabouts remain unknown. No official confirmation.",
+    "tags": [
+      "dar es salaam",
+      "machinga",
+      "simu 2000"
+    ],
+    "verified": true,
+    "sources": [
+      "https://x.com/Twaha_Mwaipaya/status/1995789680432894348",
+      "https://www.jamiiforums.com/threads/kiongozi-wa-machinga-simu-2000-ametekwa-na-watu-waliojitambulisha-ni-polisi-ametafutwa-vituo-vyote-hajapatikana.2404633/",
+      "https://www.facebook.com/ChademaInBlood/videos/3835678686563662/"
+    ],
+    "is_public": true,
+    "created_at": "2026-09-17T14:30:00Z"
   },
   {
     "id": "0001-humphrey-polepole",

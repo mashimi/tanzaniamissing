@@ -1,0 +1,31 @@
+{
+  "id": "0018-david-jumbe",
+  "full_name": "David Jumbe (Djumbe)",
+  "age": null,
+  "gender": "male",
+  "photo_path": "",
+  "last_seen_date": "2026-05-20",
+  "location": {
+    "name": "Bunju (Mabwepande), Dar es Salaam",
+    "latitude": -6.657,
+    "longitude": 39.225,
+    "region": "Dar es Salaam",
+    "district": "Kinondoni"
+  },
+  "status": "found_alive",
+  "circumstances": "Personal assistant to jailed CHADEMA chairman Tundu Lissu. On 20 May 2026 around 10 pm, near his home in the Bunju/Mabwepande area of Dar es Salaam, his car was blocked by a Toyota Probox and two motorcycles; five to six men identifying themselves as police officers pulled him out, handcuffed him, beat him with gun butts, and drove him away toward an intelligence-security forest area near Mbweni while pursuing bodaboda riders followed. When the captors stopped to fire on the pursuers, he escaped from the vehicle's boot into the forest and crawled out overnight, arriving home on the morning of 21 May 2026 in poor condition and still handcuffed. His full first-person account was published by The Chanzo; police later issued a statement on the incident.",
+  "tags": [
+    "dar es salaam",
+    "bunju",
+    "chadema",
+    "tundu lissu"
+  ],
+  "verified": true,
+  "sources": [
+    "https://thechanzo.com/2026/05/22/a-full-account-of-the-foiled-abduction-of-david-djumbe-personal-assistant-to-tanzanian-opposition-leader-tundu-lissu/",
+    "https://x.com/rugemeleza/status/2057358685668516352",
+    "https://www.youtube.com/watch?v=APdnxHc2Rzk"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-17T14:30:00Z"
+}

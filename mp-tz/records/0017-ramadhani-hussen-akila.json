@@ -1,0 +1,29 @@
+{
+  "id": "0017-ramadhani-hussen-akila",
+  "full_name": "Ramadhani Hussen Akila",
+  "age": null,
+  "gender": "male",
+  "photo_path": "",
+  "last_seen_date": "2026-08-01",
+  "location": {
+    "name": "Kawe, Dar es Salaam",
+    "latitude": -6.775,
+    "longitude": 39.248,
+    "region": "Dar es Salaam",
+    "district": "Kinondoni"
+  },
+  "status": "missing",
+  "circumstances": "Bodaboda (motorcycle taxi) driver based in Kawe, Dar es Salaam. According to an appeal shared by his pregnant wife and amplified by media pages and activists, on Saturday 1 August 2026 in the evening, about five men arrived at his home in Kawe identifying themselves as law-enforcement officials and took him away. His whereabouts remain unknown; his wife has publicly asked for help locating him. No official confirmation.",
+  "tags": [
+    "dar es salaam",
+    "kawe",
+    "bodaboda"
+  ],
+  "verified": true,
+  "sources": [
+    "https://www.instagram.com/p/Dc7ryYdossf/",
+    "https://www.threads.com/@e_plus_media/post/Dc8s7xRE8HA/ametekwa-mke-anaomba-msaada-ameachwa-na-ujauzito-pichani-anaitwa-ramadhani/"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-17T14:30:00Z"
+}

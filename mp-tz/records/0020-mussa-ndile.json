@@ -1,0 +1,30 @@
+{
+  "id": "0020-mussa-ndile",
+  "full_name": "Mussa Ndile",
+  "age": null,
+  "gender": "male",
+  "photo_path": "",
+  "last_seen_date": "2025-11-27",
+  "location": {
+    "name": "Simu 2000, Dar es Salaam",
+    "latitude": -6.816,
+    "longitude": 39.28,
+    "region": "Dar es Salaam",
+    "district": "Ilala"
+  },
+  "status": "missing",
+  "circumstances": "Chairman of the street vendors (machinga) at the Simu 2000 market in Dar es Salaam — a role confirmed by Tanzanian media including The Citizen. According to alerts shared on X and CHADEMA-aligned pages, on 27 November 2025 he was taken by individuals who identified themselves as police officers. Relatives report checking multiple police stations without finding him. His whereabouts remain unknown. No official confirmation.",
+  "tags": [
+    "dar es salaam",
+    "machinga",
+    "simu 2000"
+  ],
+  "verified": true,
+  "sources": [
+    "https://x.com/Twaha_Mwaipaya/status/1995789680432894348",
+    "https://www.jamiiforums.com/threads/kiongozi-wa-machinga-simu-2000-ametekwa-na-watu-waliojitambulisha-ni-polisi-ametafutwa-vituo-vyote-hajapatikana.2404633/",
+    "https://www.facebook.com/ChademaInBlood/videos/3835678686563662/"
+  ],
+  "is_public": true,
+  "created_at": "2026-09-17T14:30:00Z"
+}
