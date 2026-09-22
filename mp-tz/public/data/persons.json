@@ -44,7 +44,7 @@
       "district": "Ubungo"
     },
     "status": "found_deceased",
-    "circumstances": "23-year-old young man taken from his home in the Sinza area of Dar es Salaam on the night of 11 September 2026, at about 10:00 PM (saa 4 usiku), by people who had followed him and arrived on motorcycles. According to his maternal aunt (mama mdogo), his body was afterwards seen at Mwananyamala Hospital in Dar es Salaam, where it was reported that he appeared to have been struck on the head with a heavy object. Mwananyamala Hospital management says it does not know who brought the body in, because the person who delivered it did not register and simply abandoned it there — by those accounts the hospital received the body on the night of 12 September 2026. The family is asking whether he was killed during the night of 11 September or on 12 September, and who took his body to the hospital without identifying themselves. (Account as shared publicly by the family and as stated by the hospital; no independent confirmation, and no suspects have been officially named.)",
+    "circumstances": "23-year-old young man taken from his home in the Sinza area of Dar es Salaam on the night of 11 September 2026, at about 10:00 PM (saa 4 usiku), by people who had followed him and arrived on motorcycles. According to his maternal aunt (mama mdogo), his body was afterwards seen at Mwananyamala Hospital in Dar es Salaam, where it was reported that he appeared to have been struck on the head with a heavy object. Mwananyamala Hospital management says it does not know who brought the body in, because the person who delivered it did not register and simply abandoned it there — by those accounts the hospital received the body on the night of 12 September 2026. The family is asking whether he was killed during the night of 11 September or on 12 September, and who took his body to the hospital without identifying themselves. (Account as published on 21 September 2026 by Tanzanian journalist Hilda Newton (@hilda_newton_chadema) in a public Instagram post, relaying what the family said and what Mwananyamala Hospital said. It remains a single-source, social-media account: not independently confirmed, and no suspects have been officially named.)",
     "tags": [
       "dar es salaam",
       "sinza",
@@ -52,7 +52,9 @@
       "reported killed"
     ],
     "verified": false,
-    "sources": [],
+    "sources": [
+      "https://www.instagram.com/p/DdjmLY4NtQA/"
+    ],
     "is_public": true,
     "created_at": "2026-09-22T09:00:00Z"
   },
